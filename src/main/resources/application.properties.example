@@ -1,0 +1,6 @@
+# Example configuration for Weather App
+# Copy this file to application-local.properties and add your actual API key
+
+# Get your free API key from: https://openweathermap.org/api
+weather.api.key=YOUR_OPENWEATHERMAP_API_KEY_HERE
+

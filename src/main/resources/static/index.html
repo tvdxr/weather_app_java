@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Weather App</h1>
+        <p class="subtitle">Get current weather for any city</p>
+        
+        <form class="search-form" action="weather.html" method="GET">
+            <input 
+                type="text" 
+                name="city" 
+                class="city-input" 
+                placeholder="Enter city name..." 
+                required
+            >
+            <button type="submit" class="search-button">Go</button>
+        </form>
+        
+        <div class="divider">
+            <span class="divider-text">or</span>
+        </div>
+        
+        <button id="location-btn" class="location-button">
+            📍 Use My Location
+        </button>
+        
+        <div id="location-status" class="location-status" style="display: none;">
+            Getting your location...
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>

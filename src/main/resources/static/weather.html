@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Results - Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="loading" class="loading">
+            <h2>Getting weather information...</h2>
+            <div class="spinner"></div>
+        </div>
+
+        <div id="weather-results" class="weather-results" style="display: none;">
+            <h1 class="city-name" id="city-name">City Name</h1>
+            
+            <div class="weather-card">
+                <div class="weather-main">
+                    <div class="temperature" id="temperature">--°C</div>
+                    <div class="description" id="description">Loading...</div>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Feels like:</span>
+                        <span class="detail-value" id="feels-like">--°C</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Humidity:</span>
+                        <span class="detail-value" id="humidity">--%</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Wind Speed:</span>
+                        <span class="detail-value" id="wind-speed">-- km/h</span>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="back-button" onclick="goHome()">Search Another City</button>
+        </div>
+
+        <div id="error-message" class="error-message" style="display: none;">
+            <h2>Oops! Something went wrong</h2>
+            <p id="error-text">City not found</p>
+            <button class="back-button" onclick="goHome()">Try Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
