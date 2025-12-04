@@ -197,14 +197,14 @@ public class WeatherService {
         int minDistance = Integer.MAX_VALUE;
 
         for (String city : EUROPEAN_CITIES) {
-        int distance = calculateLevenshteinDistance(inputCity.toLowerCase(), city.toLowerCase());
-        
-        // dist max = 2
-        if (distance <= 2 && distance < minDistance) {
-            minDistance = distance;
-            bestMatch = city;
+            int distance = calculateLevenshteinDistance(inputCity.toLowerCase(), city.toLowerCase());
+            
+            // dist max = 2
+            if (distance <= 2 && distance < minDistance) {
+                minDistance = distance;
+                bestMatch = city;
+            }
         }
-    }
 
         if (!bestMatch.equals(bestMatch)) {
             System.out.println("City name corrected: '" + inputCity + "' -> '" + bestMatch + "'");
